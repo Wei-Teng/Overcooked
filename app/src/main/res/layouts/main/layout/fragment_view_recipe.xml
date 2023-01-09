@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".ui.viewrecipe.ViewRecipeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/ibBackArrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/contained_button_bg"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/back_arrow_pic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/ibReport"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/contained_button_bg"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/report_24"
+            app:layout_constraintBottom_toBottomOf="@+id/ibBackArrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ibBackArrow"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:maxWidth="300dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/ibBackArrow"
+            app:layout_constraintTop_toBottomOf="@id/ibBackArrow" />
+
+        <ImageView
+            android:id="@+id/ivRecipe"
+            android:layout_width="320dp"
+            android:layout_height="205dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/main_recipe_image_bg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/no_image"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <ImageView
+            android:id="@+id/ivStar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@+id/ivRecipe"
+            app:srcCompat="@drawable/star_24" />
+
+        <TextView
+            android:id="@+id/tvRatingScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/ivStar"
+            app:layout_constraintStart_toEndOf="@+id/ivStar"
+            app:layout_constraintTop_toTopOf="@id/ivStar" />
+
+        <TextView
+            android:id="@+id/tvReviewNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="(0 review(s))"
+            android:textColor="@color/light_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRatingScore"
+            app:layout_constraintStart_toEndOf="@+id/tvRatingScore"
+            app:layout_constraintTop_toTopOf="@id/tvRatingScore" />
+
+        <ImageButton
+            android:id="@+id/ibSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/save_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvReviewNum"
+            app:layout_constraintEnd_toEndOf="@+id/ivRecipe"
+            app:layout_constraintTop_toTopOf="@+id/tvReviewNum" />
+
+        <ProgressBar
+            android:id="@+id/pbLoading3"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:progressTint="@color/green"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ibSave"
+            app:layout_constraintEnd_toEndOf="@id/ibSave"
+            app:layout_constraintStart_toStartOf="@id/ibSave"
+            app:layout_constraintTop_toTopOf="@id/ibSave" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAuthor"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/no_image"
+            app:layout_constraintStart_toStartOf="@id/ivStar"
+            app:layout_constraintTop_toBottomOf="@+id/ivStar" />
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:maxWidth="150dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivAuthor"
+            app:layout_constraintStart_toEndOf="@+id/ivAuthor"
+            app:layout_constraintTop_toTopOf="@id/ivAuthor" />
+
+
+        <Button
+            android:id="@+id/btFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:text="Follow"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAuthor"
+            app:layout_constraintEnd_toEndOf="@+id/ivRecipe"
+            app:layout_constraintTop_toTopOf="@+id/ivAuthor" />
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:progressTint="@color/green"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/btFollow"
+            app:layout_constraintEnd_toEndOf="@id/btFollow"
+            app:layout_constraintStart_toStartOf="@id/btFollow"
+            app:layout_constraintTop_toTopOf="@id/btFollow" />
+
+        <TextView
+            android:id="@+id/tvServesNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="0 Serves"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/ivAuthor"
+            app:layout_constraintTop_toBottomOf="@id/ivAuthor" />
+
+        <TextView
+            android:id="@+id/tvCookTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="0 min cook time"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/btFollow"
+            app:layout_constraintTop_toBottomOf="@id/ivAuthor" />
+
+        <TextView
+            android:id="@+id/tvIngredient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Ingredients"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/ivAuthor"
+            app:layout_constraintTop_toBottomOf="@id/tvServesNum" />
+
+        <ListView
+            android:id="@+id/lvIngredient"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintEnd_toEndOf="@id/btFollow"
+            app:layout_constraintStart_toStartOf="@+id/tvIngredient"
+            app:layout_constraintTop_toBottomOf="@+id/tvIngredient"
+            tools:listitem="@layout/list_item_ingredient_format_2" />
+
+        <TextView
+            android:id="@+id/tvInstruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Instructions"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvIngredient"
+            app:layout_constraintTop_toBottomOf="@id/lvIngredient" />
+
+        <TextView
+            android:id="@+id/tvInstructionStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:maxWidth="250dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/lvIngredient"
+            app:layout_constraintStart_toStartOf="@id/lvIngredient"
+            app:layout_constraintTop_toBottomOf="@id/tvInstruction" />
+
+        <Button
+            android:id="@+id/btRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/green"
+            android:text="Rate"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInstructionStep" />
+
+        <Button
+            android:id="@+id/btDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInstructionStep" />
+
+        <ProgressBar
+            android:id="@+id/pbLoading2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:progressTint="@android:color/holo_red_dark"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/btDelete"
+            app:layout_constraintEnd_toEndOf="@id/btDelete"
+            app:layout_constraintStart_toStartOf="@id/btDelete"
+            app:layout_constraintTop_toTopOf="@id/btDelete" />
+
+        <Button
+            android:id="@+id/btEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="Edit"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInstructionStep" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".ui.viewrecipe.EditRecipeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/ibBackArrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/contained_button_bg"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/back_arrow_pic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Edit recipe"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/ibBackArrow"
+            app:layout_constraintTop_toBottomOf="@id/ibBackArrow" />
+
+        <ImageView
+            android:id="@+id/ivRecipe"
+            android:layout_width="320dp"
+            android:layout_height="205dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/main_recipe_image_bg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/no_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Put title here"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivRecipe" />
+
+        <View
+            android:id="@+id/viewServesData"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#E3E2E2"
+            app:layout_constraintEnd_toEndOf="@id/ivRecipe"
+            app:layout_constraintStart_toStartOf="@id/ivRecipe"
+            app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+
+        <ImageView
+            android:id="@+id/ivServes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/createrecipe_serves"
+            app:layout_constraintBottom_toBottomOf="@+id/viewServesData"
+            app:layout_constraintStart_toStartOf="@+id/viewServesData"
+            app:layout_constraintTop_toTopOf="@+id/viewServesData" />
+
+        <TextView
+            android:id="@+id/tvServes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Serves"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/viewServesData"
+            app:layout_constraintStart_toEndOf="@+id/ivServes"
+            app:layout_constraintTop_toTopOf="@+id/viewServesData" />
+
+        <EditText
+            android:id="@+id/etServesNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Add number"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/viewServesData"
+            app:layout_constraintEnd_toEndOf="@+id/viewServesData"
+            app:layout_constraintTop_toTopOf="@+id/viewServesData" />
+
+        <View
+            android:id="@+id/viewCookTimeData"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="15dp"
+            android:background="#E3E2E2"
+            app:layout_constraintEnd_toEndOf="@id/ivRecipe"
+            app:layout_constraintStart_toStartOf="@id/ivRecipe"
+            app:layout_constraintTop_toBottomOf="@+id/viewServesData" />
+
+        <ImageView
+            android:id="@+id/ivCookTime"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/createrecipe_cooktime"
+            app:layout_constraintBottom_toBottomOf="@+id/viewCookTimeData"
+            app:layout_constraintStart_toStartOf="@+id/viewCookTimeData"
+            app:layout_constraintTop_toTopOf="@+id/viewCookTimeData" />
+
+        <TextView
+            android:id="@+id/tvCookTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Cook Time"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/viewCookTimeData"
+            app:layout_constraintStart_toEndOf="@+id/ivCookTime"
+            app:layout_constraintTop_toTopOf="@+id/viewCookTimeData" />
+
+        <EditText
+            android:id="@+id/etCookTimeMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Time in minutes"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/viewCookTimeData"
+            app:layout_constraintEnd_toEndOf="@+id/viewCookTimeData"
+            app:layout_constraintTop_toTopOf="@+id/viewCookTimeData" />
+
+        <TextView
+            android:id="@+id/tvIngredient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Ingredients"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/viewCookTimeData"
+            app:layout_constraintTop_toBottomOf="@id/viewCookTimeData" />
+
+        <EditText
+            android:id="@+id/etIngredientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:hint="Ingredient name"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            app:layout_constraintStart_toStartOf="@id/tvIngredient"
+            app:layout_constraintTop_toBottomOf="@id/tvIngredient" />
+
+        <EditText
+            android:id="@+id/etIngredientMass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:hint="Mass in gram"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            app:layout_constraintStart_toStartOf="@id/etIngredientName"
+            app:layout_constraintTop_toBottomOf="@+id/etIngredientName" />
+
+        <Button
+            android:id="@+id/btAddIngredient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:backgroundTint="@color/green"
+            android:text="Add"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/etIngredientMass"
+            app:layout_constraintStart_toEndOf="@+id/etIngredientMass"
+            app:layout_constraintTop_toTopOf="@id/etIngredientName" />
+
+        <ListView
+            android:id="@+id/lvIngredient"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:nestedScrollingEnabled="true"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            app:layout_constraintEnd_toEndOf="@id/ivRecipe"
+            app:layout_constraintStart_toStartOf="@id/ivRecipe"
+            app:layout_constraintTop_toBottomOf="@+id/etIngredientMass"
+            tools:listitem="@layout/list_item_ingredient_format_1" />
+
+        <TextView
+            android:id="@+id/tvEmptyIngredients"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Add Ingredients here"
+            android:visibility="visible"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lvIngredient"
+            app:layout_constraintBottom_toBottomOf="@+id/lvIngredient"/>
+
+        <TextView
+            android:id="@+id/tvInstruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Instructions"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvIngredient"
+            app:layout_constraintTop_toBottomOf="@id/lvIngredient" />
+
+        <EditText
+            android:id="@+id/etInstruction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:hint="Enter Instruction here"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            app:layout_constraintEnd_toEndOf="@id/ivRecipe"
+            app:layout_constraintStart_toStartOf="@id/ivRecipe"
+            app:layout_constraintTop_toBottomOf="@+id/tvInstruction" />
+
+        <Button
+            android:id="@+id/btEditRecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/contained_button_bg"
+            android:backgroundTint="@color/green"
+            android:padding="10dp"
+            android:text="Edit recipe"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etInstruction" />
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:progressTint="@color/green"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/btEditRecipe"
+            app:layout_constraintEnd_toEndOf="@id/btEditRecipe"
+            app:layout_constraintStart_toStartOf="@id/btEditRecipe"
+            app:layout_constraintTop_toTopOf="@id/btEditRecipe" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

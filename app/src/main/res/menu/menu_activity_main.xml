@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/main_home"
+        android:title="Home"
+        app:cnb_iconColor="@color/green" />
+
+    <item
+        android:id="@+id/savedRecipeFragment"
+        android:icon="@drawable/main_saved_recipe"
+        android:title="Saved Recipe"
+        app:cnb_iconColor="@color/green" />
+
+    <item
+        android:id="@+id/addRecipeFragment"
+        android:icon="@drawable/main_add_recipe"
+        android:title="Add Recipe"
+        app:cnb_iconColor="@color/green" />
+    <item
+        android:id="@+id/notificationFragment"
+        android:icon="@drawable/main_notification"
+        android:title="Notification"
+        app:cnb_iconColor="@color/green" />
+
+    <item
+        android:id="@+id/myProfileFragment"
+        android:icon="@drawable/main_profile"
+        android:title="Profile"
+        app:cnb_iconColor="@color/green" />
+</menu>

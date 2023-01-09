@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Overcooked</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_forget_password">Forgot Password?</string>
+    <string name="title_activity_create_new_password">Create New Password</string>
+    <string name="title_activity_change_password_success">Password Changed!</string>
+    <string name="title_activity_verify_email">Email Verification</string>
+    <string name="prompt_email">Enter your email</string>
+    <string name="prompt_password">Enter your password</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="action_register"><u>Register Now</u></string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_register_email">Email</string>
+    <string name="prompt_region">Region/Nationality</string>
+    <string name="prompt_register_password">Password</string>
+    <string name="prompt_new_password">New password</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="exist_account">Already have an account?</string>
+    <string name="action_login"><u>Login Now</u></string>
+    <string name="instruction_helper_forget_password">Don\' worry! It occurs. Please enter the email address linked with your account.</string>
+    <string name="instruction_helper_create_new_password">Your new password must be unique from those previously used.</string>
+    <string name="instruction_helper_verify_email">Click continue to login if your email has already been verified. If you haven\'t received any email, please click resend verification email.</string>
+    <string name="remember_password">Remember Password?</string>
+    <string name="send_password_reset_email">Send Password Reset Email</string>
+    <string name="resend_verification_email">Resend Verification Email</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="continue_to_login">Continue To Login</string>
+    <string name="resend_after_1_minute">Resend after 1 minute</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="my_profile">My Profile</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
